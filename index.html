@@ -2,10 +2,105 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ubuyama-degital-service.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>うぶやまデジタルサービス</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー：会社名 */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+        .company-name {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* ヒーローエリア */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('uds-hero-ubuyama-bg.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* 画面いっぱいに表示 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-content .sub-copy {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content .description {
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        /* コンテンツエリア */
+        .container {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        footer {
+            background: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <h1>ubuyama-degital-service.com へようこそ</h1>
-    <p>現在、サイトを構築中です。</p>
+
+    <header>
+        <div class="company-name">うぶやまデジタルサービス</div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>産山村の挑戦を繋ぐ、<br>デジタル実装チーム</h1>
+            <p class="sub-copy">挑戦が孤立しない村へ。</p>
+            <p class="description">
+                繋いで、整えて、届けて、回す。<br>
+                産山村発の仕組みを実装します。
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+        <p>現在、公式ウェブサイトを準備中です。</p>
+    </main>
+
+    <footer>
+        &copy; 2026 うぶやまデジタルサービス
+    </footer>
+
 </body>
 </html>
