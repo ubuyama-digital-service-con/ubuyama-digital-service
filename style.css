@@ -20,6 +20,28 @@ header {
     z-index: 10;
 }
 
+/* ロゴ画像の調整 */
+.logo-img {
+    height: 40px;
+    /* ロゴの高さを調整（お好みで変えてください） */
+    width: auto;
+    /* 横幅は自動計算 */
+    vertical-align: middle;
+    /* 横の文字と高さを合わせる */
+    margin-right: 10px;
+    /* ロゴと文字の間の隙間 */
+}
+
+.company-name {
+    display: flex;
+    align-items: center;
+    /* 縦方向の真ん中に揃える */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
 .company-name {
     color: white;
     font-size: 1.2rem;
