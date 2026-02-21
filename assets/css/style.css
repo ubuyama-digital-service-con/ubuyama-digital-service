@@ -7,6 +7,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     /* 横揺れ防止 */
+    background-image: url("../../uds-hero-ubuyama-bg.png");
 }
 
 /* ヘッダー：会社名 */
@@ -68,7 +69,7 @@ header {
 /* style.css の中 */
 .hero-section {
     /* 「../」でcssフォルダを出て、「../」でassetsフォルダを出る */
-    background-image: url("../../uds-hero-ubuyama-bg.png");
+    /*background-image: url("../../uds-hero-ubuyama-bg.png");*/
     background-size: cover;
     background-position: center;
 }
@@ -126,5 +127,73 @@ footer {
 
     .hero-content .description {
         font-size: 0.9rem;
+    }
+
+    /* ナビゲーションセクションの装飾 */
+    .main-navigation {
+        padding: 80px 0;
+        background: rgba(255, 255, 255, 0.9);
+        /* 背景画像を薄く透かす */
+        text-align: center;
+    }
+
+    .nav-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .nav-item {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 30px 20px;
+        width: 200px;
+        text-decoration: none;
+        color: #333;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border-color: #007bff;
+    }
+
+    .nav-item .icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .nav-item h4 {
+        margin: 10px 0;
+        font-size: 1.1rem;
+        color: #007bff;
+    }
+
+    .nav-item p {
+        font-size: 0.85rem;
+        color: #666;
+        margin: 0;
+    }
+
+    /* 「ご相談」だけ特別な色にする */
+    .contact-special {
+        background: #007bff;
+        border-color: #007bff;
+    }
+
+    .contact-special h4,
+    .contact-special p,
+    .contact-special .icon {
+        color: #fff;
+    }
+
+    .contact-special:hover {
+        background: #0056b3;
     }
 }
