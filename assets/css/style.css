@@ -129,6 +129,51 @@ footer {
         font-size: 0.9rem;
     }
 
+    .left-content {
+        max-width: 300px;
+        /* ボタンの横幅を制限 */
+        text-align: left;
+    }
+
+    /* 縦並びのナビゲーションスタイル */
+    .side-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-item-small {
+        background: rgba(255, 255, 255, 0.8);
+        /* 少し透かして背景に馴染ませる */
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 12px 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 0.95rem;
+        font-family: "ヒラギノ角ゴシック ProN W6", sans-serif;
+        transition: all 0.3s ease;
+    }
+
+    .nav-item-small:hover {
+        background: #fff;
+        transform: translateX(10px);
+        /* 右に少し動く演出 */
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 相談ボタンだけ目立たせる */
+    .nav-item-small.contact-special {
+        background: #007bff;
+        color: #fff;
+        border-color: #007bff;
+        margin-top: 10px;
+    }
+
+    .nav-item-small.contact-special:hover {
+        background: #0056b3;
+    }
+
     /* ナビゲーションセクションの装飾 */
     .main-navigation {
         padding: 80px 0;
