@@ -43,11 +43,7 @@ header {
     letter-spacing: 0.05em;
 }
 
-.left-content {
-    max-width: 300px;
-    /* ボタンの横幅を制限 */
-    text-align: left;
-}
+
 
 /* ヒーローエリア（背景画像セクション） */
 .hero {
@@ -65,13 +61,110 @@ header {
     text-align: center;
 }
 
-/* style.css の中 */
+/* ヒーローセクション全体（背景画像） */
 .hero-section {
-    /* 「../」でcssフォルダを出て、「../」でassetsフォルダを出る */
-    /*background-image: url("../../uds-hero-ubuyama-bg.png");*/
+    min-height: 100vh;
+    background-image: url("../../uds-hero-ubuyama-bg.png");
+    /* パスは適宜調整 */
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    /* 上下中央 */
+    justify-content: center;
+    padding: 0 5%;
 }
+
+/* 左右を並べるコンテナ */
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* ナビとテキストの間隔 */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 左側：ナビゲーション */
+.hero-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.nav-item-small {
+    background: rgba(255, 255, 255, 0.15);
+    /* 背景をさらに透かしてオシャレに */
+    backdrop-filter: blur(5px);
+    /* 背景をぼかす（モダンな手法） */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    /* 文字は白に */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-item-small:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transform: translateX(5px);
+}
+
+.contact-special {
+    background: rgba(0, 123, 255, 0.8);
+    border-color: #007bff;
+}
+
+/* 右側：テキストコンテンツ */
+.hero-text-content {
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* 文字の視認性を上げる */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: "HG明朝E", serif;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: "ヒラギノ角ゴシック ProN W6", sans-serif;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* スマホ対応：縦並びにする */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        /* スマホではテキストを上に */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* style.css の中 /
+.hero-section {
+    /* 「../」でcssフォルダを出て、「../」でassetsフォルダを出る */
+/*background-image: url("../../uds-hero-ubuyama-bg.png");/
+    background-size: cover;
+    background-position: center;
+}*/
 
 .hero-content h1 {
     font-size: 2.8rem;
@@ -128,7 +221,11 @@ footer {
         font-size: 0.9rem;
     }
 
-
+    .left-content {
+        max-width: 300px;
+        /* ボタンの横幅を制限 */
+        text-align: left;
+    }
 
     /* 縦並びのナビゲーションスタイル */
     .side-nav {
